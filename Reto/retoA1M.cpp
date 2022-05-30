@@ -22,8 +22,10 @@ void Video::setMuestraDatos(string _tipoVideo, string _nombreVideo, string _gene
     duracion = _duracion;
 }
 void Video::getMuestraDatos(){
+    cout << "================================================================" << endl;
     cout << "Tipo de video: " << tipoVideo << endl;
     cout << "Nombre de video: " << nombreVideo << " del genero: " << genero << endl;
     cout << "Año de lanzamiento: " << annoLanzamiento << " con duracion de: " << duracion << " minutos." << endl;
-    cout << "Calificacion: " << (calificacion != 0 ? calificacion : 0) << endl << endl;
+    cout << "Calificacion: " << (((calificacion < 0 or calificacion >= 11)? 0 : calificacion) != 0 ? calificacion : 0) << endl << endl;
+    cout << "================================================================" << endl;
 }  
